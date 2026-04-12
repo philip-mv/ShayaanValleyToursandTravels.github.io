@@ -6,14 +6,14 @@
   <title>Shayaan Valley Tours | Explore Kashmir</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="icon" type="image/png" href="image.png" />
   
   <!-- Open Graph / Social Media Meta Tags -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.shayaanvalleytours.com/" />
   <meta property="og:title" content="Shayaan Valley Tours | Explore Kashmir" />
   <meta property="og:description" content="Fresh, authentic, and curated with love — Shayaan Valley Tours brings you the real Kashmir. Off-beat and classic tour packages." />
-  <meta property="og:image" content="logo.png" />
+  <meta property="og:image" content="image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="1200" />
   
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Shayaan Valley Tours | Explore Kashmir" />
   <meta name="twitter:description" content="Fresh, authentic, and curated with love — Shayaan Valley Tours brings you the real Kashmir." />
-  <meta name="twitter:image" content="logo.png" />
+  <meta name="twitter:image" content="image.png" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -307,7 +307,7 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="#" class="nav-logo">
-        <img src="logo.png" alt="Shayaan Valley Tours" class="nav-logo-img" />
+        <img src="image.png" alt="Shayaan Valley Tours" class="nav-logo-img" />
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
@@ -406,7 +406,7 @@
               <h5>✅ What's Included</h5>
               <div class="includes-tags">
                 <span class="includes-tag">🍽️ All Meals</span>
-                <span class="includes-tag">🚗 Water Car</span>
+                <span class="includes-tag">🚗 Car</span>
                 <span class="includes-tag">🏨 Hotels</span>
                 <span class="includes-tag">📸 Sightseeing</span>
               </div>
@@ -485,8 +485,16 @@
               <div class="pricing-label">Per Person Pricing:</div>
               <div class="pricing-options">
                 <div class="pricing-row">
-                  <span class="pricing-pax">Standard Group</span>
+                  <span class="pricing-pax">Max <span>2</span> pax</span>
+                  <span class="pricing-amount">₹14,500 <small>/person</small></span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-pax">Max <span>4</span> pax</span>
                   <span class="pricing-amount">₹12,500 <small>/person</small></span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-pax">Max <span>6</span> pax</span>
+                  <span class="pricing-amount">₹10,500 <small>/person</small></span>
                 </div>
               </div>
               <button class="btn-book" onclick="bookNormal()">
@@ -588,7 +596,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="nav-logo">
-            <img src="logo.png" alt="Shayaan Valley Tours" class="nav-logo-img" style="height: 70px; filter: brightness(0) invert(1);" />
+            <img src="image.png" alt="Shayaan Valley Tours" class="nav-logo-img" style="height: 70px; filter: brightness(0) invert(1);" />
           </div>
           <p>A fresh, new Kashmir travel experience. We're building something real — one trip at a time.</p>
         </div>
@@ -640,7 +648,7 @@
 
     // BOOK NORMAL PACKAGE
     function bookNormal() {
-      const message = `Hi Shayaan Valley Tours! 👋\n\nI'm interested in booking the *Classic Kashmir Tour* (7 Days/6 Nights)\n\nPackage Details:\n- Gulmarg\n- Pahalgam (2 nights)\n- Sonamarg\n- Doodhpathri\n- Srinagar (4 nights)\n- Price: ₹12,500/person\n\nPlease share more details and availability.\n\nThank you!`;
+      const message = `Hi Shayaan Valley Tours! 👋\n\nI'm interested in booking the *Classic Kashmir Tour* (7 Days/6 Nights)\n\nPackage Details:\n- Gulmarg\n- Pahalgam (2 nights)\n- Sonamarg\n- Doodhpathri\n- Srinagar (4 nights)\n- Price: Starting ₹10,500/person\n\nPlease share more details and availability.\n\nThank you!`;
       const encodedMessage = encodeURIComponent(message);
       window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
     }
