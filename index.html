@@ -3,727 +3,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shayaan Valley Tours | Explore Kashmir</title>
+  <title>Shayaan Valley Tours | 2026 Premium Kashmir</title>
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="image.png" />
+  <link rel="icon" type="image/png" href="logo.png" />
   
-  <!-- Open Graph / Social Media Meta Tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.shayaanvalleytours.com/" />
   <meta property="og:title" content="Shayaan Valley Tours | Explore Kashmir" />
-  <meta property="og:description" content="Fresh, authentic, and curated with love — Shayaan Valley Tours brings you the real Kashmir. Off-beat and classic tour packages." />
-  <meta property="og:image" content="image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="1200" />
-  
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Shayaan Valley Tours | Explore Kashmir" />
-  <meta name="twitter:description" content="Fresh, authentic, and curated with love — Shayaan Valley Tours brings you the real Kashmir." />
-  <meta name="twitter:image" content="image.png" />
-  
+  <meta property="og:description" content="Fresh, authentic, and curated with love — Shayaan Valley Tours brings you the real Kashmir." />
+  <meta property="og:image" content="logo.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+
   <style>
     :root {
-      --primary: #0B3D2E;
-      --primary-light: #145A3E;
-      --accent: #D4A84B;
-      --accent-light: #F0D078;
-      --snow: #F9F7F3;
-      --ice: #EAF2EE;
-      --charcoal: #1A1A1A;
-      --slate: #4A5568;
-      --sky: #2B6CB0;
-      --whatsapp: #25D366;
-      --glass-bg: rgba(255, 255, 255, 0.06);
-      --glass-border: rgba(255, 255, 255, 0.12);
-      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-      --shadow-md: 0 8px 30px rgba(0,0,0,0.1);
-      --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
-      --radius-sm: 8px;
-      --radius-md: 16px;
-      --radius-lg: 24px;
-      --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --primary: #04291D;
+      --primary-soft: #0A3D2E;
+      --accent: #E2B144;
+      --text-main: #1A1C1B;
+      --text-muted: #64748B;
+      --bg-soft: #F4F7F5;
+      --white: #ffffff;
+      --glass: rgba(255, 255, 255, 0.8);
+      --radius-lg: 32px;
+      --radius-md: 20px;
+      --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow: 0 20px 40px rgba(4, 41, 29, 0.05);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: 'Inter', sans-serif; color: var(--charcoal); background: var(--snow); overflow-x: hidden; line-height: 1.7; }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
-    a { text-decoration: none; color: inherit; }
-    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg-soft); color: var(--text-main); overflow-x: hidden; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.1; }
 
-    /* NAVBAR */
-    .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 18px 0; transition: var(--transition); }
-    .navbar.scrolled { background: rgba(11, 61, 46, 0.96); backdrop-filter: blur(20px); padding: 12px 0; box-shadow: 0 4px 30px rgba(0,0,0,0.2); }
-    .navbar .container { display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 12px; }
-    .nav-logo-img { height: 65px; width: auto; object-fit: contain; }
-    .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: #fff; }
-    .nav-logo-text span { color: var(--accent-light); }
-    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-    .nav-links a { color: rgba(255,255,255,0.8); font-weight: 500; font-size: 0.92rem; transition: var(--transition); position: relative; }
-    .nav-links a:hover { color: #fff; }
-    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent); transition: var(--transition); }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-cta { background: var(--whatsapp) !important; color: #fff !important; padding: 10px 26px !important; border-radius: 50px; font-weight: 600 !important; }
-    .nav-cta:hover { background: #128C7E !important; transform: translateY(-2px); }
-    .nav-cta::after { display: none !important; }
-    .mobile-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 1001; }
-    .mobile-toggle span { width: 26px; height: 2.5px; background: #fff; border-radius: 2px; transition: var(--transition); }
-    .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    .mobile-toggle.active span:nth-child(2) { opacity: 0; }
-    .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-    /* HERO */
-    .hero { min-height: 100vh; position: relative; display: flex; align-items: center; }
-    .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11, 61, 46, 0.88) 0%, rgba(11, 61, 46, 0.35) 50%, rgba(43, 108, 176, 0.45) 100%), url('https://images.unsplash.com/photo-1598010963480-22c6085a8821?w=1920&q=80') center/cover no-repeat; }
-    .hero-particles { position: absolute; inset: 0; z-index: 1; overflow: hidden; }
-    .particle { position: absolute; background: rgba(255,255,255,0.25); border-radius: 50%; animation: float-up linear infinite; }
-    @keyframes float-up { 0% { transform: translateY(100vh) scale(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-10vh) scale(1); opacity: 0; } }
-    .hero-content { position: relative; z-index: 2; max-width: 750px; padding-top: 100px; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(212, 168, 75, 0.15); border: 1px solid rgba(212, 168, 75, 0.3); padding: 8px 20px; border-radius: 50px; color: var(--accent-light); font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; backdrop-filter: blur(10px); animation: fadeInUp 0.8s ease forwards; }
-    .hero-badge::before { content: '✦'; animation: spin 3s linear infinite; }
-    @keyframes spin { 100% { transform: rotate(360deg); } }
-    .hero h1 { font-size: clamp(2.6rem, 5.5vw, 4.5rem); color: #fff; margin-bottom: 20px; animation: fadeInUp 0.8s ease 0.2s forwards; opacity: 0; }
-    .hero h1 .highlight { background: linear-gradient(135deg, var(--accent-light), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero p { font-size: 1.15rem; color: rgba(255,255,255,0.75); max-width: 550px; margin-bottom: 36px; animation: fadeInUp 0.8s ease 0.4s forwards; opacity: 0; }
-    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeInUp 0.8s ease 0.6s forwards; opacity: 0; }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 15px 32px; border-radius: 50px; font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer; transition: var(--transition); font-family: 'Inter', sans-serif; }
-    .btn-primary { background: var(--accent); color: var(--primary); }
-    .btn-primary:hover { background: var(--accent-light); transform: translateY(-3px); box-shadow: 0 10px 40px rgba(212, 168, 75, 0.35); }
-    .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.35); }
-    .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: #fff; transform: translateY(-3px); }
-    .btn-whatsapp { background: var(--whatsapp); color: #fff; }
-    .btn-whatsapp:hover { background: #128C7E; transform: translateY(-3px); box-shadow: 0 10px 40px rgba(37, 211, 102, 0.35); }
-
-    /* MARQUEE */
-    .marquee-section { padding: 50px 0; background: var(--primary); overflow: hidden; }
-    .marquee-label { text-align: center; color: rgba(255,255,255,0.4); font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; font-weight: 600; }
-    .marquee-track { display: flex; gap: 50px; animation: marquee 35s linear infinite; width: max-content; }
-    .marquee-item { display: flex; align-items: center; gap: 14px; white-space: nowrap; color: rgba(255,255,255,0.45); font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 600; }
-    .marquee-item .dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
-    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-    /* SECTION */
-    .section { padding: 100px 0; }
-    .section-header { text-align: center; max-width: 650px; margin: 0 auto 56px; }
-    .section-tag { display: inline-block; color: var(--accent); font-weight: 600; font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; }
-    .section-header h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--primary); margin-bottom: 14px; }
-    .section-header p { color: var(--slate); font-size: 1.05rem; }
-
-    /* PACKAGES */
-    .packages { background: linear-gradient(180deg, var(--snow) 0%, var(--ice) 100%); }
-    .packages-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px; max-width: 1050px; margin: 0 auto; }
-    .package-card { background: #fff; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); position: relative; display: flex; flex-direction: column; }
-    .package-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-    .package-card-header { position: relative; height: 240px; overflow: hidden; }
-    .package-card-header img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-    .package-card:hover .package-card-header img { transform: scale(1.06); }
-    .package-type-tag { position: absolute; top: 16px; left: 16px; padding: 6px 18px; border-radius: 50px; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
-    .tag-offbeat { background: var(--sky); color: #fff; }
-    .tag-normal { background: var(--accent); color: var(--primary); }
-    .package-card-body { padding: 32px; flex: 1; display: flex; flex-direction: column; }
-    .package-card-body h3 { font-size: 1.5rem; color: var(--charcoal); margin-bottom: 8px; }
-    .package-duration { font-size: 0.85rem; color: var(--accent); font-weight: 600; margin-bottom: 20px; display: flex; align-items: center; gap: 6px; }
-    .package-itinerary { list-style: none; margin-bottom: 28px; }
-    .package-itinerary li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.92rem; color: var(--slate); }
-    .package-itinerary li:last-child { border-bottom: none; }
-    .itinerary-icon { color: var(--primary); font-weight: 700; min-width: 20px; }
-    .itinerary-nights { background: var(--ice); color: var(--primary); font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 50px; margin-left: auto; white-space: nowrap; }
-    .package-includes { background: var(--snow); padding: 16px 20px; border-radius: var(--radius-sm); margin-bottom: 24px; }
-    .package-includes h5 { font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; }
-    .includes-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .includes-tag { background: #fff; padding: 4px 12px; border-radius: 50px; font-size: 0.78rem; color: var(--slate); border: 1px solid #e8e8e8; }
-    .pricing-section { margin-top: auto; padding-top: 20px; border-top: 2px solid var(--snow); }
-    .pricing-label { font-size: 0.78rem; color: var(--slate); font-weight: 500; margin-bottom: 12px; }
-    .pricing-options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
-    .pricing-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: var(--snow); border-radius: var(--radius-sm); }
-    .pricing-pax { font-size: 0.85rem; color: var(--slate); font-weight: 500; }
-    .pricing-pax span { font-weight: 700; color: var(--charcoal); }
-    .pricing-amount { font-size: 1.2rem; font-weight: 800; color: var(--primary); }
-    .pricing-amount small { font-size: 0.72rem; font-weight: 500; color: var(--slate); }
-    .btn-book { width: 100%; padding: 15px; background: var(--whatsapp); color: #fff; border: none; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: var(--transition); font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; gap: 8px; }
-    .btn-book:hover { background: #128C7E; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3); }
-
-    /* SEASONAL */
-    .seasonal { background: var(--snow); }
-    .seasonal-card { max-width: 900px; margin: 0 auto; background: linear-gradient(135deg, rgba(11, 61, 46, 0.06) 0%, rgba(163, 213, 232, 0.15) 100%); border: 2px dashed rgba(11, 61, 46, 0.15); border-radius: var(--radius-lg); padding: 60px 48px; text-align: center; position: relative; overflow: hidden; }
-    .seasonal-card::before { content: '🌷'; position: absolute; top: -20px; right: -20px; font-size: 8rem; opacity: 0.08; }
-    .seasonal-icon { font-size: 3.5rem; margin-bottom: 20px; display: block; }
-    .seasonal-card h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 10px; }
-    .seasonal-card > p { color: var(--slate); font-size: 1rem; max-width: 500px; margin: 0 auto 12px; }
-    .seasonal-status { display: inline-flex; align-items: center; gap: 8px; background: rgba(229, 62, 62, 0.08); border: 1px solid rgba(229, 62, 62, 0.2); color: #C53030; padding: 8px 22px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; }
-    .seasonal-status .pulse { width: 8px; height: 8px; background: #C53030; border-radius: 50%; animation: pulse 1.5s ease infinite; }
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-    .seasonal-coming { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
-
-    /* WHY US */
-    .why-us { background: var(--snow); }
-    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 950px; margin: 0 auto; }
-    .why-card { background: #fff; padding: 32px 28px; border-radius: var(--radius-md); text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition); }
-    .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-    .why-card-icon { font-size: 2.2rem; margin-bottom: 16px; }
-    .why-card h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
-    .why-card p { font-size: 0.85rem; color: var(--slate); line-height: 1.6; }
-
-    /* CTA */
-    .cta { padding: 100px 0; background: linear-gradient(135deg, rgba(11, 61, 46, 0.92), rgba(43, 108, 176, 0.75)), url('https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1920&q=80') center/cover no-repeat; text-align: center; color: #fff; }
-    .cta h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: 16px; }
-    .cta p { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 550px; margin: 0 auto 36px; }
-    .cta-buttons { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
-
-    /* FOOTER */
-    .footer { background: var(--charcoal); color: #fff; padding: 60px 0 0; }
-    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.2fr; gap: 40px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .footer-brand p { color: rgba(255,255,255,0.45); font-size: 0.88rem; margin: 14px 0 20px; max-width: 300px; }
-    .footer h4 { font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 700; margin-bottom: 20px; color: var(--accent); }
-    .footer-links { list-style: none; }
-    .footer-links li { margin-bottom: 10px; }
-    .footer-links a { color: rgba(255,255,255,0.4); font-size: 0.88rem; transition: var(--transition); }
-    .footer-links a:hover { color: #fff; padding-left: 6px; }
-    .footer-bottom { padding: 22px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-    .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.82rem; }
-    .footer-whatsapp-btn { background: var(--whatsapp); color: #fff; padding: 14px 32px; border-radius: 50px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: var(--transition); }
-    .footer-whatsapp-btn:hover { background: #128C7E; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); }
-
-    /* FLOATING WHATSAPP BUTTON */
-    .floating-whatsapp {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 60px;
-      height: 60px;
-      background: var(--whatsapp);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      color: #fff;
-      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
-      z-index: 999;
-      transition: var(--transition);
-      animation: float-whatsapp 2s ease-in-out infinite;
-      cursor: pointer;
-      border: none;
+    /* --- NAVIGATION --- */
+    .nav-wrapper { position: fixed; top: 20px; width: 100%; z-index: 1000; padding: 0 24px; }
+    .navbar { 
+      max-width: 1200px; margin: 0 auto; background: var(--glass); backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 100px; padding: 12px 32px; display: flex; justify-content: space-between; align-items: center;
+      box-shadow: var(--shadow); transition: var(--transition);
     }
-    .floating-whatsapp:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 35px rgba(37, 211, 102, 0.5);
-    }
-    @keyframes float-whatsapp {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-    .whatsapp-tooltip {
-      position: fixed;
-      bottom: 95px;
-      right: 30px;
-      background: #fff;
-      color: var(--charcoal);
-      padding: 10px 18px;
-      border-radius: var(--radius-sm);
-      font-size: 0.85rem;
-      font-weight: 600;
-      box-shadow: var(--shadow-md);
-      z-index: 998;
-      opacity: 0;
-      visibility: hidden;
-      transition: var(--transition);
-      white-space: nowrap;
-    }
-    .whatsapp-tooltip.show {
-      opacity: 1;
-      visibility: visible;
-      bottom: 100px;
-    }
-    .whatsapp-tooltip::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      right: 35px;
-      width: 12px;
-      height: 12px;
-      background: #fff;
-      transform: rotate(45deg);
-    }
+    .navbar.scrolled { background: rgba(4, 41, 29, 0.96); border-color: rgba(255,255,255,0.1); }
+    .nav-logo img { height: 50px; transition: var(--transition); }
+    .navbar.scrolled .nav-logo img { filter: brightness(0) invert(1); }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { font-weight: 600; font-size: 0.9rem; color: var(--primary); transition: 0.3s; }
+    .navbar.scrolled .nav-links a { color: #fff; opacity: 0.8; }
+    .nav-cta { background: var(--primary); color: #fff !important; padding: 10px 24px; border-radius: 50px; }
+    .navbar.scrolled .nav-cta { background: var(--accent); color: var(--primary) !important; }
 
-    /* SCROLL REVEAL */
-    .reveal { opacity: 0; transform: translateY(35px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* BACK TO TOP */
-    .back-to-top { position: fixed; bottom: 30px; left: 30px; width: 48px; height: 48px; background: var(--primary); color: #fff; border: none; border-radius: 50%; font-size: 18px; cursor: pointer; z-index: 999; opacity: 0; visibility: hidden; transition: var(--transition); box-shadow: 0 4px 16px rgba(11, 61, 46, 0.4); }
-    .back-to-top.visible { opacity: 1; visibility: visible; }
-    .back-to-top:hover { background: var(--accent); color: var(--primary); transform: translateY(-3px); }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .packages-grid { grid-template-columns: 1fr; max-width: 550px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .why-grid { grid-template-columns: repeat(2, 1fr); }
+    /* --- HERO --- */
+    .hero { 
+      height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
+      background: linear-gradient(rgba(4,41,29,0.5), rgba(4,41,29,0.5)), url('https://images.unsplash.com/photo-1598010963480-22c6085a8821?w=1920&q=80') center/cover;
+      color: #fff; padding: 0 24px;
     }
-    @media (max-width: 640px) {
-      .nav-links { position: fixed; top: 0; right: -100%; width: 80%; max-width: 320px; height: 100vh; background: var(--primary); flex-direction: column; justify-content: center; padding: 40px; gap: 24px; transition: var(--transition); box-shadow: -10px 0 40px rgba(0,0,0,0.3); }
-      .nav-links.open { right: 0; }
-      .mobile-toggle { display: flex; }
-      .hero h1 { font-size: 2.2rem; }
-      .hero-buttons { flex-direction: column; }
-      .btn { justify-content: center; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .why-grid { grid-template-columns: 1fr; }
-      .seasonal-card { padding: 40px 28px; }
-      .section { padding: 80px 0; }
-      .package-card-body { padding: 24px; }
-      .nav-logo-img { height: 55px; }
-      .floating-whatsapp {
-        width: 55px;
-        height: 55px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 28px;
-      }
-      .whatsapp-tooltip {
-        right: 20px;
-        bottom: 80px;
-        font-size: 0.8rem;
-        padding: 8px 14px;
-      }
-      .back-to-top {
-        left: 20px;
-        bottom: 20px;
-      }
+    .hero-content h1 { font-size: clamp(2.5rem, 8vw, 5.5rem); margin-bottom: 20px; }
+    .hero-content p { font-size: 1.2rem; max-width: 650px; margin: 0 auto 32px; opacity: 0.9; }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* --- MARQUEE --- */
+    .marquee-container { background: var(--primary); padding: 40px 0; overflow: hidden; }
+    .marquee-track { display: flex; gap: 60px; animation: scroll 40s linear infinite; width: max-content; }
+    .marquee-item { color: rgba(255,255,255,0.5); font-size: 1.5rem; font-family: 'Playfair Display', serif; display: flex; align-items: center; gap: 15px; }
+    .marquee-item::before { content: ''; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; }
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* --- BENTO PACKAGES --- */
+    .section-padding { padding: 100px 24px; max-width: 1200px; margin: 0 auto; }
+    .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
+    .bento-card { 
+      background: var(--white); border-radius: var(--radius-lg); padding: 40px; 
+      box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.03);
+      display: flex; flex-direction: column;
+    }
+    .bento-card:hover { transform: translateY(-10px); }
+    
+    .card-offbeat { grid-column: span 7; background: var(--primary); color: #fff; }
+    .card-normal { grid-column: span 5; }
+    
+    .badge { background: var(--accent); color: var(--primary); padding: 6px 14px; border-radius: 50px; font-weight: 800; font-size: 0.7rem; text-transform: uppercase; width: fit-content; margin-bottom: 20px; }
+    .card-itinerary { list-style: none; margin: 24px 0; }
+    .card-itinerary li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 0.95rem; }
+    .card-normal .card-itinerary li { border-bottom-color: #eee; color: var(--text-muted); }
+
+    .price-row { background: rgba(255,255,255,0.05); padding: 12px 20px; border-radius: 12px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
+    .card-normal .price-row { background: var(--bg-soft); }
+    .price-amount { font-weight: 800; color: var(--accent); font-size: 1.2rem; }
+
+    /* --- SEASONAL --- */
+    .seasonal-banner { 
+      grid-column: span 12; background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+      display: grid; grid-template-columns: 1fr 1fr; align-items: center; overflow: hidden;
+    }
+    .seasonal-text { padding: 60px; }
+
+    /* --- BUTTONS --- */
+    .btn-main { padding: 16px 32px; border-radius: 100px; font-weight: 700; border: none; cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; }
+    .btn-gold { background: var(--accent); color: var(--primary); }
+    .btn-dark { background: var(--primary); color: #fff; }
+    .btn-wa { background: #25D366; color: #fff; width: 100%; justify-content: center; margin-top: 20px; }
+
+    /* --- FOOTER --- */
+    footer { background: #fff; padding: 80px 24px 40px; border-radius: 60px 60px 0 0; margin-top: 100px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+
+    @media (max-width: 992px) {
+      .card-offbeat, .card-normal, .seasonal-banner { grid-column: span 12; grid-template-columns: 1fr; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#" class="nav-logo">
-        <img src="image.png" alt="Shayaan Valley Tours" class="nav-logo-img" />
-      </a>
-      <ul class="nav-links" id="navLinks">
+  <div class="nav-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#" class="nav-logo"><img src="logo.png" alt="Shayaan Valley" /></a>
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#packages">Packages</a></li>
         <li><a href="#seasonal">Seasonal</a></li>
-        <li><a href="#why">Why Us</a></li>
-        <li><a href="https://wa.me/917006483646?text=Hi%20Shayaan%20Valley%20Tours!%20I'm%20interested%20in%20booking%20a%20Kashmir%20tour.%20Please%20share%20the%20details." class="nav-cta" target="_blank">💬 Chat on WhatsApp</a></li>
+        <li><a href="https://wa.me/917006483646" class="nav-cta">WhatsApp Chat</a></li>
       </ul>
-      <div class="mobile-toggle" id="mobileToggle">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 
-  <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-particles" id="particles"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">New Kashmir Travel Experience</div>
-        <h1>Your Kashmir Adventure <span class="highlight">Starts Here</span></h1>
-        <p>Fresh, authentic, and curated with love — Shayaan Valley Tours brings you the real Kashmir. Pick your vibe, pack your bags, and let us handle the rest.</p>
-        <div class="hero-buttons">
-          <a href="#packages" class="btn btn-primary">View Packages →</a>
-          <a href="https://wa.me/917006483646?text=Hi%20Shayaan%20Valley%20Tours!%20I'm%20interested%20in%20Kashmir%20tours.%20Please%20share%20more%20details." class="btn btn-whatsapp" target="_blank">💬 WhatsApp Us</a>
-        </div>
+    <div class="hero-content">
+      <div class="badge" style="margin: 0 auto 20px;">Premium Travel 2026</div>
+      <h1>Your Kashmir Adventure <br><i>Starts Here</i></h1>
+      <p>Fresh, authentic, and curated with local love. Pick your vibe and let Shayaan Valley Tours handle the rest.</p>
+      <div class="hero-btns">
+        <a href="#packages" class="btn-main btn-gold">View Packages</a>
+        <a href="https://wa.me/917006483646" class="btn-main btn-dark">WhatsApp Us</a>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE - OFFBEAT PLACES -->
-  <div class="marquee-section">
-    <div class="marquee-label">📍 Off-Beat Trail</div>
+  <div class="marquee-container">
     <div class="marquee-track">
-      <div class="marquee-item"><span class="dot"></span>Gurez Valley</div>
-      <div class="marquee-item"><span class="dot"></span>Bangus Valley</div>
-      <div class="marquee-item"><span class="dot"></span>Lolab Valley</div>
-      <div class="marquee-item"><span class="dot"></span>Keran</div>
-      <div class="marquee-item"><span class="dot"></span>Kishanganga River</div>
-      <div class="marquee-item"><span class="dot"></span>Shina Culture</div>
-      <div class="marquee-item"><span class="dot"></span>Gurez Valley</div>
-      <div class="marquee-item"><span class="dot"></span>Bangus Valley</div>
-      <div class="marquee-item"><span class="dot"></span>Lolab Valley</div>
-      <div class="marquee-item"><span class="dot"></span>Keran</div>
-      <div class="marquee-item"><span class="dot"></span>Kishanganga River</div>
-      <div class="marquee-item"><span class="dot"></span>Shina Culture</div>
+      <div class="marquee-item">Gurez Valley</div><div class="marquee-item">Bangus Valley</div>
+      <div class="marquee-item">Lolab Valley</div><div class="marquee-item">Keran</div>
+      <div class="marquee-item">Kishanganga River</div><div class="marquee-item">Shina Culture</div>
+      <div class="marquee-item">Gurez Valley</div><div class="marquee-item">Bangus Valley</div>
+      <div class="marquee-item">Lolab Valley</div><div class="marquee-item">Keran</div>
+      <div class="marquee-item">Kishanganga River</div><div class="marquee-item">Shina Culture</div>
     </div>
   </div>
 
-  <!-- PACKAGES -->
-  <section class="section packages" id="packages">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Our Packages</span>
-        <h2>Choose Your Kashmir Vibe</h2>
-        <p>Two handcrafted itineraries. One for the wanderers who love the road less traveled, one for those who want the classic Kashmir experience.</p>
+  <main class="section-padding" id="packages">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2>Choose Your Vibe</h2>
+      <p style="color: var(--text-muted);">Two Handcrafted Itineraries for the Modern Traveler</p>
+    </div>
+
+    <div class="bento-grid">
+      <section class="bento-card card-offbeat">
+        <div class="badge">Off-Beat Expedition</div>
+        <h3>Off-Beat Kashmir Tour</h3>
+        <p style="opacity: 0.8; margin-top: 10px;">8 Days · 7 Nights of Untouched Frontier</p>
+        
+        <ul class="card-itinerary">
+          <li><span>Gurez Valley</span> <strong>2 Nights</strong></li>
+          <li><span>Bangus Valley</span> <strong>1 Night</strong></li>
+          <li><span>Lolab Valley</span> <strong>2 Nights</strong></li>
+          <li><span>Keran</span> <strong>1 Night</strong></li>
+        </ul>
+
+        <div style="margin-bottom: 25px;">
+          <p style="font-size: 0.8rem; margin-bottom: 10px; opacity: 0.6;">PRICING PER PERSON</p>
+          <div class="price-row"><span>Max 12 Pax</span> <span class="price-amount">₹22,000</span></div>
+          <div class="price-row"><span>Max 6 Pax</span> <span class="price-amount">₹25,000</span></div>
+          <div class="price-row"><span>Max 5 Pax</span> <span class="price-amount">₹28,000</span></div>
+        </div>
+
+        <button onclick="bookOffBeat()" class="btn-main btn-wa">💬 Book via WhatsApp</button>
+      </section>
+
+      <section class="bento-card card-normal">
+        <div class="badge" style="background: #f0f0f0;">The Classic Trail</div>
+        <h3 style="color: var(--primary);">Classic Kashmir Tour</h3>
+        <p style="color: var(--text-muted); margin-top: 10px;">7 Days · 6 Nights of Icons</p>
+        
+        <ul class="card-itinerary">
+          <li><span>Gulmarg & Sonamarg</span></li>
+          <li><span>Pahalgam</span> <strong>2 Nights</strong></li>
+          <li><span>Doodhpathri</span></li>
+          <li><span>Srinagar</span> <strong>4 Nights</strong></li>
+        </ul>
+
+        <div style="margin-bottom: 25px;">
+          <p style="font-size: 0.8rem; margin-bottom: 10px; color: var(--text-muted);">PRICING PER PERSON</p>
+          <div class="price-row"><span style="color: var(--text-muted);">Standard Group</span> <span class="price-amount" style="color: var(--primary);">₹12,500</span></div>
+        </div>
+
+        <button onclick="bookNormal()" class="btn-main btn-dark btn-wa" style="background: var(--primary);">💬 Book via WhatsApp</button>
+      </section>
+
+      <section class="bento-card seasonal-banner" id="seasonal">
+        <div class="seasonal-text">
+          <div class="badge">Limited Spring Special</div>
+          <h3 style="color: var(--primary); font-size: 2.5rem;">Tulip Garden & Blooms</h3>
+          <p style="color: var(--text-muted); margin: 20px 0;">Experience Asia's largest tulip garden in Srinagar. Millions of colors bursting into life.</p>
+          <p style="font-weight: 700; color: #C53030; margin-bottom: 20px;">📅 Expected: March – April 2027</p>
+          <a href="https://wa.me/917006483646" class="btn-main btn-dark">Notify Me</a>
+        </div>
+        <div style="background: url('https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80') center/cover; height: 100%; min-height: 300px;"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <img src="logo.png" style="height: 60px; margin-bottom: 20px;">
+        <p style="color: var(--text-muted);">A fresh approach to Kashmir travel. Local roots, modern planning.</p>
       </div>
-
-      <div class="packages-grid">
-
-        <!-- OFFBEAT CARD -->
-        <div class="package-card reveal" data-category="offbeat">
-          <div class="package-card-header">
-            <img src="https://images.unsplash.com/photo-1626621331169-5f34be280ed4?w=700&q=80" alt="Gurez Valley" />
-            <span class="package-type-tag tag-offbeat">Off-Beat</span>
-          </div>
-          <div class="package-card-body">
-            <h3>Off-Beat Kashmir Tour</h3>
-            <div class="package-duration">⏱ 8 Days · 7 Nights</div>
-
-            <ul class="package-itinerary">
-              <li>
-                <span class="itinerary-icon">📍</span>
-                <span>Gurez Valley</span>
-                <span class="itinerary-nights">2 Nights</span>
-              </li>
-              <li>
-                <span class="itinerary-icon">📍</span>
-                <span>Bangus Valley</span>
-                <span class="itinerary-nights">1 Night</span>
-              </li>
-              <li>
-                <span class="itinerary-icon">📍</span>
-                <span>Lolab Valley</span>
-                <span class="itinerary-nights">2 Nights</span>
-              </li>
-              <li>
-                <span class="itinerary-icon">📍</span>
-                <span>Keran</span>
-                <span class="itinerary-nights">1 Night</span>
-              </li>
-            </ul>
-
-            <div class="package-includes">
-              <h5>✅ What's Included</h5>
-              <div class="includes-tags">
-                <span class="includes-tag">🍽️ All Meals</span>
-                <span class="includes-tag">🚗 Car</span>
-                <span class="includes-tag">🏨 Hotels</span>
-                <span class="includes-tag">📸 Sightseeing</span>
-              </div>
-            </div>
-
-            <div class="pricing-section">
-              <div class="pricing-label">Per Person Pricing:</div>
-              <div class="pricing-options">
-                <div class="pricing-row">
-                  <span class="pricing-pax">Max <span>12</span> pax</span>
-                  <span class="pricing-amount">₹22,000 <small>/person</small></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-pax">Max <span>6</span> pax</span>
-                  <span class="pricing-amount">₹25,000 <small>/person</small></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-pax">Max <span>5</span> pax</span>
-                  <span class="pricing-amount">₹28,000 <small>/person</small></span>
-                </div>
-              </div>
-              <button class="btn-book" onclick="bookOffBeat()">
-                <span>💬</span> Book on WhatsApp
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- NORMAL CARD -->
-        <div class="package-card reveal" data-category="normal">
-          <div class="package-card-header">
-            <img src="https://images.unsplash.com/photo-1596708682977-18cc98a9ba53?w=700&q=80" alt="Gulmarg" />
-            <span class="package-type-tag tag-normal">Normal</span>
-          </div>
-          <div class="package-card-body">
-            <h3>Classic Kashmir Tour</h3>
-            <div class="package-duration">⏱ 7 Days · 6 Nights</div>
-
-            <ul class="package-itinerary">
-              <li>
-                <span class="itinerary-icon">📍</span>
-                <span>Gulmarg</span>
-              </li>
-              <li>
-                <span class="itinerary-icon">📍</span>
-                <span>Pahalgam</span>
-                <span class="itinerary-nights">2 Nights</span>
-              </li>
-              <li>
-                <span class="itinerary-icon">📍</span>
-                <span>Sonamarg</span>
-              </li>
-              <li>
-                <span class="itinerary-icon">📍</span>
-                <span>Doodhpathri</span>
-              </li>
-              <li>
-                <span class="itinerary-icon">📍</span>
-                <span>Srinagar</span>
-                <span class="itinerary-nights">4 Nights</span>
-              </li>
-            </ul>
-
-            <div class="package-includes">
-              <h5>✅ What's Included</h5>
-              <div class="includes-tags">
-                <span class="includes-tag">🏨 Hotel Stay</span>
-                <span class="includes-tag">🚗 Car Transfer</span>
-                <span class="includes-tag">🍽️ Dinner</span>
-                <span class="includes-tag">☕ Breakfast</span>
-                <span class="includes-tag">🚕 Driver Allowance</span>
-              </div>
-            </div>
-
-            <div class="pricing-section">
-              <div class="pricing-label">Per Person Pricing:</div>
-              <div class="pricing-options">
-                <div class="pricing-row">
-                  <span class="pricing-pax">Max <span>2</span> pax</span>
-                  <span class="pricing-amount">₹14,500 <small>/person</small></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-pax">Max <span>4</span> pax</span>
-                  <span class="pricing-amount">₹12,500 <small>/person</small></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-pax">Max <span>6</span> pax</span>
-                  <span class="pricing-amount">₹10,500 <small>/person</small></span>
-                </div>
-              </div>
-              <button class="btn-book" onclick="bookNormal()">
-                <span>💬</span> Book on WhatsApp
-              </button>
-            </div>
-          </div>
-        </div>
-
+      <div>
+        <h4 style="margin-bottom: 20px;">Quick Links</h4>
+        <ul style="list-style: none; color: var(--text-muted); line-height: 2;">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#seasonal">Seasonal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 20px;">Contact</h4>
+        <p style="color: var(--text-muted);">Srinagar, Kashmir<br>+91 70064 83646</p>
       </div>
     </div>
-  </section>
-
-  <!-- MARQUEE - NORMAL PLACES -->
-  <div class="marquee-section" style="background: var(--primary-light);">
-    <div class="marquee-label">📍 Classic Trail</div>
-    <div class="marquee-track" style="animation-direction: reverse;">
-      <div class="marquee-item"><span class="dot"></span>Gulmarg</div>
-      <div class="marquee-item"><span class="dot"></span>Pahalgam</div>
-      <div class="marquee-item"><span class="dot"></span>Sonamarg</div>
-      <div class="marquee-item"><span class="dot"></span>Doodhpathri</div>
-      <div class="marquee-item"><span class="dot"></span>Srinagar</div>
-      <div class="marquee-item"><span class="dot"></span>Dal Lake</div>
-      <div class="marquee-item"><span class="dot"></span>Gulmarg</div>
-      <div class="marquee-item"><span class="dot"></span>Pahalgam</div>
-      <div class="marquee-item"><span class="dot"></span>Sonamarg</div>
-      <div class="marquee-item"><span class="dot"></span>Doodhpathri</div>
-      <div class="marquee-item"><span class="dot"></span>Srinagar</div>
-      <div class="marquee-item"><span class="dot"></span>Dal Lake</div>
-    </div>
-  </div>
-
-  <!-- SEASONAL -->
-  <section class="section seasonal" id="seasonal">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Seasonal Specials</span>
-        <h2>Seasonal Kashmir Experiences</h2>
-        <p>Kashmir transforms every season. Here's what's coming up next.</p>
-      </div>
-      <div class="seasonal-card reveal">
-        <span class="seasonal-icon">🌷</span>
-        <h3>Tulip Garden & Spring Blooms</h3>
-        <p>The famous Indira Gandhi Memorial Tulip Garden in Srinagar bursts into millions of colors every spring — Asia's largest tulip garden awaits.</p>
-        <div class="seasonal-status">
-          <span class="pulse"></span>
-          Not Available Right Now
-        </div>
-        <p class="seasonal-coming">📅 Expected: March – April 2027</p>
-        <br>
-        <a href="https://wa.me/917006483646?text=Hi!%20I'm%20interested%20in%20the%20Tulip%20Garden%20tour.%20Please%20notify%20me%20when%20it's%20available." class="btn btn-whatsapp" target="_blank" style="font-size: 0.88rem; padding: 12px 28px;">💬 Notify Me on WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY US -->
-  <section class="section why-us" id="why">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Why Shayaan Valley</span>
-        <h2>Fresh Energy. Real Kashmir.</h2>
-        <p>We're a new team with fresh ideas, local roots, and a genuine love for this land.</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card reveal">
-          <div class="why-card-icon">🌱</div>
-          <h4>New & Fresh Approach</h4>
-          <p>Modern planning, transparent pricing, and honest service — no old-agency runaround.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="why-card-icon">🗺️</div>
-          <h4>Local Kashmiri Team</h4>
-          <p>Born and raised in Kashmir. We know the spots that don't show up on Google Maps.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="why-card-icon">💎</div>
-          <h4>Quality Over Quantity</h4>
-          <p>Small group sizes for personal experiences. We're building our reputation — so we go all out.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container reveal">
-      <h2>Ready for Kashmir?</h2>
-      <p>Pick a package, message us on WhatsApp, and let's plan your trip together. Simple as that.</p>
-      <div class="cta-buttons">
-        <a href="#packages" class="btn btn-primary">View Packages →</a>
-        <a href="https://wa.me/917006483646?text=Hi%20Shayaan%20Valley%20Tours!%20I'm%20ready%20to%20book%20my%20Kashmir%20trip.%20Please%20help%20me%20choose%20the%20best%20package." class="btn btn-whatsapp" target="_blank">💬 Chat on WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="nav-logo">
-            <img src="image.png" alt="Shayaan Valley Tours" class="nav-logo-img" style="height: 70px; filter: brightness(0) invert(1);" />
-          </div>
-          <p>A fresh, new Kashmir travel experience. We're building something real — one trip at a time.</p>
-        </div>
-        <div>
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#packages">Packages</a></li>
-            <li><a href="#seasonal">Seasonal</a></li>
-            <li><a href="#why">Why Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Packages</h4>
-          <ul class="footer-links">
-            <li><a href="#packages">Off-Beat Kashmir Tour</a></li>
-            <li><a href="#packages">Classic Kashmir Tour</a></li>
-          </ul>
-          <a href="https://wa.me/917006483646?text=Hi%20Shayaan%20Valley%20Tours!%20I'm%20interested%20in%20booking%20a%20Kashmir%20tour.%20Please%20share%20the%20details." class="footer-whatsapp-btn" target="_blank" style="margin-top: 20px;">
-            <span>💬</span> Book on WhatsApp
-          </a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Shayaan Valley Tours. All rights reserved.</p>
-      </div>
-    </div>
+    <p style="text-align: center; margin-top: 60px; color: var(--text-muted); font-size: 0.8rem;">© 2026 Shayaan Valley Tours. All rights reserved.</p>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
-  <div class="whatsapp-tooltip" id="whatsappTooltip">Chat with us!</div>
-  <button class="floating-whatsapp" onclick="generalWhatsApp()" title="Chat on WhatsApp">
-    💬
-  </button>
-
-  <!-- BACK TO TOP -->
-  <button class="back-to-top" id="backToTop">↑</button>
-
   <script>
-    // WHATSAPP NUMBER
-    const whatsappNumber = '917006483646';
-
-    // BOOK OFF-BEAT PACKAGE
-    function bookOffBeat() {
-      const message = `Hi Shayaan Valley Tours! 👋\n\nI'm interested in booking the *Off-Beat Kashmir Tour* (8 Days/7 Nights)\n\nPackage Details:\n- Gurez Valley (2 nights)\n- Bangus Valley (1 night)\n- Lolab Valley (2 nights)\n- Keran (1 night)\n- Price: Starting ₹22,000/person\n\nPlease share more details and availability.\n\nThank you!`;
-      const encodedMessage = encodeURIComponent(message);
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
-    }
-
-    // BOOK NORMAL PACKAGE
-    function bookNormal() {
-      const message = `Hi Shayaan Valley Tours! 👋\n\nI'm interested in booking the *Classic Kashmir Tour* (7 Days/6 Nights)\n\nPackage Details:\n- Gulmarg\n- Pahalgam (2 nights)\n- Sonamarg\n- Doodhpathri\n- Srinagar (4 nights)\n- Price: Starting ₹10,500/person\n\nPlease share more details and availability.\n\nThank you!`;
-      const encodedMessage = encodeURIComponent(message);
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
-    }
-
-    // GENERAL WHATSAPP CHAT
-    function generalWhatsApp() {
-      const message = `Hi Shayaan Valley Tours! 👋\n\nI'm interested in Kashmir tours. Please share the details.\n\nThank you!`;
-      const encodedMessage = encodeURIComponent(message);
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
-    }
-
-    // NAVBAR SCROLL
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 80));
-
-    // MOBILE MENU
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navLinks = document.getElementById('navLinks');
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileToggle.classList.remove('active');
-        navLinks.classList.remove('open');
-      });
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
     });
 
-    // PARTICLES
-    const particlesContainer = document.getElementById('particles');
-    for (let i = 0; i < 25; i++) {
-      const p = document.createElement('div');
-      p.classList.add('particle');
-      p.style.left = Math.random() * 100 + '%';
-      p.style.width = p.style.height = Math.random() * 4 + 2 + 'px';
-      p.style.animationDuration = Math.random() * 8 + 6 + 's';
-      p.style.animationDelay = Math.random() * 5 + 's';
-      particlesContainer.appendChild(p);
+    const wa = '917006483646';
+    function bookOffBeat() {
+      const msg = encodeURIComponent("Hi Shayaan Valley Tours! 👋 I'm interested in the Off-Beat Kashmir Tour (8 Days). Please share details.");
+      window.open(`https://wa.me/${wa}?text=${msg}`, '_blank');
     }
-
-    // SCROLL REVEAL
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => revealObs.observe(el));
-
-    // BACK TO TOP
-    const btt = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 500));
-    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    // WHATSAPP TOOLTIP
-    const tooltip = document.getElementById('whatsappTooltip');
-    setTimeout(() => {
-      tooltip.classList.add('show');
-      setTimeout(() => {
-        tooltip.classList.remove('show');
-      }, 4000);
-    }, 2000);
-
-    // SMOOTH SCROLL
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
-          }
-        }
-      });
-    });
+    function bookNormal() {
+      const msg = encodeURIComponent("Hi Shayaan Valley Tours! 👋 I'm interested in the Classic Kashmir Tour (7 Days). Please share details.");
+      window.open(`https://wa.me/${wa}?text=${msg}`, '_blank');
+    }
   </script>
 </body>
 </html>
