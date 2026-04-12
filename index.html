@@ -1,252 +1,1070 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shayaan Valley Tours | Explore Kashmir</title>
-  
-  <link rel="icon" type="image/png" href="image.png" />
-  
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.shayaanvalleytours.com/" />
-  <meta property="og:title" content="Shayaan Valley Tours | Explore Kashmir" />
-  <meta property="og:description" content="Fresh, authentic, and curated with love — Shayaan Valley Tours brings you the real Kashmir." />
-  <meta property="og:image" content="image.png" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  
-  <style>
-    :root {
-      --primary: #04291D;
-      --primary-light: #0B3D2E;
-      --accent: #D4A84B;
-      --accent-light: #F0D078;
-      --snow: #F9F7F3;
-      --ice: #EAF2EE;
-      --charcoal: #121212;
-      --slate: #4A5568;
-      --whatsapp: #25D366;
-      --radius-lg: 32px;
-      --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: 'Inter', sans-serif; color: var(--charcoal); background: var(--snow); overflow-x: hidden; line-height: 1.7; }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.1; }
-    a { text-decoration: none; color: inherit; }
-    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-
-    /* NAVBAR FIXES */
-    .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 24px 0; transition: var(--transition); }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shayaan Valley Tours | Explore Kashmir 2026</title>
     
-    /* When scrolled, background turns dark, so we keep logo bright */
-    .navbar.scrolled { 
-      background: rgba(4, 41, 29, 0.95); 
-      backdrop-filter: blur(15px); 
-      padding: 12px 0; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
-    }
+    <link rel="icon" type="image/png" href="image.png" />
     
-    .navbar .container { display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo-img { height: 60px; width: auto; object-fit: contain; transition: var(--transition); }
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.shayaanvalleytours.com/" />
+    <meta property="og:title" content="Shayaan Valley Tours | Explore Kashmir" />
+    <meta property="og:description" content="Fresh, authentic, and curated with love — Shayaan Valley Tours brings you the real Kashmir. Off-beat and classic tour packages." />
+    <meta property="og:image" content="image.png" />
     
-    /* FIX: Ensures logo stays visible. If your image is dark, we invert it for the dark scrolled header */
-    .navbar.scrolled .nav-logo-img { height: 45px; filter: brightness(0) invert(1); }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-    .nav-links a { color: #fff; font-weight: 500; font-size: 0.95rem; transition: var(--transition); position: relative; }
-    .nav-links a:hover { color: var(--accent-light); }
-    
-    .nav-cta { background: var(--accent) !important; color: var(--primary) !important; padding: 12px 28px !important; border-radius: 100px; font-weight: 700 !important; }
+    <style>
+        /* ------------------------------------------------------------
+        1. CSS VARIABLES & ROOT
+        ------------------------------------------------------------
+        */
+        :root {
+            --primary: #04291D;
+            --primary-light: #0B3D2E;
+            --primary-ultra-light: #145A3E;
+            --accent: #D4A84B;
+            --accent-light: #F0D078;
+            --accent-dark: #B38B36;
+            --snow: #F9F7F3;
+            --ice: #EAF2EE;
+            --charcoal: #121212;
+            --slate: #4A5568;
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
+            
+            --glass-white: rgba(255, 255, 255, 0.85);
+            --glass-dark: rgba(4, 41, 29, 0.95);
+            
+            --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+            --shadow-md: 0 12px 32px rgba(0,0,0,0.1);
+            --shadow-lg: 0 24px 64px rgba(4, 41, 29, 0.15);
+            
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 40px;
+            
+            --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-hero: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
 
-    /* HERO */
-    .hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; background: var(--primary); }
-    .hero-bg { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4, 41, 29, 0.7) 0%, rgba(4, 41, 29, 0.4) 100%), url('https://images.unsplash.com/photo-1598010963480-22c6085a8821?w=1920&q=80') center/cover no-repeat; transform: scale(1.05); }
-    .hero-content { position: relative; z-index: 2; max-width: 850px; color: #fff; }
-    .hero h1 .highlight { color: var(--accent); }
+        /* ------------------------------------------------------------
+        2. GLOBAL RESET
+        ------------------------------------------------------------
+        */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
 
-    /* PACKAGES */
-    .section { padding: 100px 0; }
-    .section-header { text-align: center; margin-bottom: 60px; }
-    .packages-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
-    .package-card { background: #fff; border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition); border: 1px solid rgba(0,0,0,0.05); }
-    .package-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
-    .package-card-body { padding: 35px; }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    /* MARQUEE */
-    .marquee-section { padding: 30px 0; background: var(--primary); overflow: hidden; color: #fff; }
-    .marquee-track { display: flex; gap: 60px; animation: marquee 30s linear infinite; width: max-content; }
-    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--charcoal);
+            background: var(--snow);
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
 
-    /* SEASONAL */
-    .seasonal-card { background: #fff; border-radius: 32px; padding: 60px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+            font-weight: 700;
+        }
 
-    /* FOOTER FIXES */
-    .footer { background: var(--primary); padding: 80px 0 40px; color: #fff; border-radius: 40px 40px 0 0; }
-    .footer-logo-img { 
-      height: 70px; 
-      width: auto; 
-      margin-bottom: 25px; 
-      /* FIX: Removed the heavy filters that caused the white square */
-      filter: brightness(0) invert(1); 
-      opacity: 0.9;
-    }
-    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
 
-    /* ANIMATIONS */
-    .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+        ul {
+            list-style: none;
+        }
 
-    .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--accent); border: none; border-radius: 50%; cursor: pointer; opacity: 0; transition: 0.3s; }
-    .back-to-top.visible { opacity: 1; }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
-    @media (max-width: 900px) {
-      .packages-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 120px 0;
+        }
+
+        /* ------------------------------------------------------------
+        3. NAVIGATION BAR
+        ------------------------------------------------------------
+        */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2000;
+            padding: 30px 0;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            padding: 15px 0;
+            background: var(--glass-dark);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+            transition: var(--transition-smooth);
+        }
+
+        /* LOGO FIX: Keeps logo white/bright on scrolled dark background */
+        .navbar.scrolled .nav-logo-img {
+            height: 50px;
+            filter: brightness(0) invert(1);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--accent) !important;
+            color: var(--primary) !important;
+            padding: 12px 30px !important;
+            border-radius: 100px;
+            font-weight: 800 !important;
+            box-shadow: 0 8px 20px rgba(212, 168, 75, 0.3);
+            text-transform: uppercase;
+            font-size: 0.85rem !important;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-3px);
+            background: var(--white) !important;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+
+        .mobile-toggle {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .mobile-toggle span {
+            width: 30px;
+            height: 2px;
+            background: var(--white);
+            transition: var(--transition-smooth);
+        }
+
+        /* ------------------------------------------------------------
+        4. HERO SECTION
+        ------------------------------------------------------------
+        */
+        .hero {
+            height: 100vh;
+            min-height: 800px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--primary);
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(4, 41, 29, 0.8),
+                rgba(4, 41, 29, 0.4)
+            );
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            color: var(--white);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 24px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem, 8vw, 6.5rem);
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 650px;
+            margin-bottom: 50px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.4s forwards;
+            font-weight: 300;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.6s forwards;
+        }
+
+        .btn-xl {
+            padding: 20px 45px;
+            border-radius: 100px;
+            font-weight: 800;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-hero-primary {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-hero-outline {
+            border: 1px solid rgba(255,255,255,0.4);
+            color: var(--white);
+        }
+
+        .btn-hero-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+            border-color: var(--white);
+        }
+
+        /* ------------------------------------------------------------
+        5. MARQUEE TEXT
+        ------------------------------------------------------------
+        */
+        .marquee-container {
+            background: var(--primary);
+            padding: 50px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            overflow: hidden;
+        }
+
+        .marquee-wrap {
+            display: flex;
+            gap: 80px;
+            animation: marqueeScroll 40s linear infinite;
+            width: max-content;
+        }
+
+        .marquee-item {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: rgba(255,255,255,0.15);
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            transition: var(--transition-smooth);
+        }
+
+        .marquee-item:hover {
+            color: var(--accent);
+        }
+
+        .marquee-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ------------------------------------------------------------
+        6. PACKAGES GRID
+        ------------------------------------------------------------
+        */
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .tag-line {
+            color: var(--accent);
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .section-title h2 {
+            font-size: 3.5rem;
+            color: var(--primary);
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .package-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .p-card-img {
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .p-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-hero);
+        }
+
+        .package-card:hover .p-card-img img {
+            transform: scale(1.1);
+        }
+
+        .p-type {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 10;
+        }
+
+        .type-offbeat { background: var(--sky); color: #fff; }
+        .type-classic { background: var(--accent); color: var(--primary); }
+
+        .p-card-content {
+            padding: 50px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .p-card-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .p-duration {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent-dark);
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .itinerary-list {
+            margin-bottom: 40px;
+        }
+
+        .itinerary-list li {
+            padding: 15px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .itinerary-list li span:last-child {
+            background: var(--ice);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .pricing-box {
+            margin-top: auto;
+            background: var(--snow);
+            padding: 30px;
+            border-radius: var(--radius-md);
+        }
+
+        .pricing-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .pricing-item b {
+            font-size: 1.3rem;
+            color: var(--primary);
+        }
+
+        .btn-wa-booking {
+            width: 100%;
+            margin-top: 25px;
+            background: var(--whatsapp);
+            color: var(--white);
+            border: none;
+            padding: 18px;
+            border-radius: 15px;
+            font-weight: 800;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .btn-wa-booking:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ------------------------------------------------------------
+        7. SEASONAL SECTION
+        ------------------------------------------------------------
+        */
+        .seasonal-section {
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 80px 80px 0 0;
+            margin-top: -80px;
+            position: relative;
+            z-index: 50;
+        }
+
+        .seasonal-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 80px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .seasonal-icon {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .seasonal-card h2 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+        }
+
+        .seasonal-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(212, 168, 75, 0.1);
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-weight: 700;
+            margin: 30px 0;
+        }
+
+        .pulse-dot {
+            width: 10px;
+            height: 10px;
+            background: #C53030;
+            border-radius: 50%;
+            animation: pulseAnim 2s infinite;
+        }
+
+        @keyframes pulseAnim {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+
+        /* ------------------------------------------------------------
+        8. TESTIMONIALS (Styling addition)
+        ------------------------------------------------------------
+        */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .testi-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        /* ------------------------------------------------------------
+        9. FOOTER
+        ------------------------------------------------------------
+        */
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 100px 0 50px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        /* FOOTER LOGO FIX */
+        .footer-logo-img {
+            height: 80px;
+            width: auto;
+            margin-bottom: 30px;
+            filter: brightness(0) invert(1); /* Ensures no white box, just the logo */
+            opacity: 0.9;
+        }
+
+        .footer-about p {
+            opacity: 0.6;
+            font-size: 0.95rem;
+            max-width: 300px;
+        }
+
+        .footer h4 {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--accent);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            opacity: 0.6;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent);
+            padding-left: 10px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            opacity: 0.8;
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            opacity: 0.4;
+            font-size: 0.85rem;
+        }
+
+        /* ------------------------------------------------------------
+        10. UTILITIES & ANIMATIONS
+        ------------------------------------------------------------
+        */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: var(--transition-smooth);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            cursor: pointer;
+            z-index: 1000;
+            border: none;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-fast);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ------------------------------------------------------------
+        11. RESPONSIVE DESIGN
+        ------------------------------------------------------------
+        */
+        @media (max-width: 1200px) {
+            .hero h1 { font-size: 5rem; }
+            .packages-grid { gap: 30px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        }
+
+        @media (max-width: 992px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: flex; }
+            .packages-grid { grid-template-columns: 1fr; }
+            .hero-content { text-align: center; }
+            .hero-btns { justify-content: center; }
+            .section-padding { padding: 80px 0; }
+            .section-title h2 { font-size: 2.8rem; }
+            .p-card-content { padding: 30px; }
+            .seasonal-card { padding: 40px 20px; }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 3.5rem; }
+            .hero-badge { font-size: 0.7rem; }
+            .btn-xl { width: 100%; justify-content: center; }
+            .hero-btns { flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#" class="nav-logo">
-        <img src="image.png" alt="Shayaan Valley Tours" class="nav-logo-img" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#packages">Packages</a></li>
-        <li><a href="#seasonal">Seasonal</a></li>
-        <li><a href="#why">Why Us</a></li>
-        <li><a href="https://wa.me/917006483646" class="nav-cta" target="_blank">💬 WhatsApp</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="container">
-      <div class="hero-content">
-        <h1>Your Kashmir Adventure <span class="highlight">Starts Here</span></h1>
-        <p>Fresh, authentic, and curated with love — Shayaan Valley Tours brings you the real Kashmir.</p>
-        <div style="display:flex; gap:15px; flex-wrap:wrap;">
-          <a href="#packages" style="background:var(--accent); color:var(--primary); padding:15px 30px; border-radius:50px; font-weight:700;">View Packages</a>
-          <a href="https://wa.me/917006483646" style="border:1px solid #fff; color:#fff; padding:15px 30px; border-radius:50px;">Chat with Us</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="marquee-section">
-    <div class="marquee-track">
-      <div class="marquee-item">Gurez Valley • Bangus Valley • Lolab Valley • Keran • Kishanganga River • Shina Culture • </div>
-      <div class="marquee-item">Gurez Valley • Bangus Valley • Lolab Valley • Keran • Kishanganga River • Shina Culture • </div>
-    </div>
-  </div>
-
-  <section class="section" id="packages">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2>Choose Your Kashmir Vibe</h2>
-      </div>
-      <div class="packages-grid">
-        <div class="package-card reveal">
-          <div style="height:250px; background:url('https://images.unsplash.com/photo-1626621331169-5f34be280ed4?w=700') center/cover;"></div>
-          <div class="package-card-body">
-            <h3>Off-Beat Kashmir Tour</h3>
-            <p style="color:var(--accent); font-weight:700;">8 Days · 7 Nights</p>
-            <ul style="list-style:none; margin:20px 0;">
-              <li>📍 Gurez Valley (2 Nights)</li>
-              <li>📍 Bangus Valley (1 Night)</li>
-              <li>📍 Lolab Valley (2 Nights)</li>
-              <li>📍 Keran (1 Night)</li>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <img src="image.png" alt="Shayaan Valley Tours" class="nav-logo-img" />
+            </a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#packages">Destinations</a></li>
+                <li><a href="#seasonal">Spring Special</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="https://wa.me/917006483646" class="nav-cta">Book Adventure</a></li>
             </ul>
-            <div style="background:var(--snow); padding:15px; border-radius:15px;">
-              <div style="display:flex; justify-content:space-between; margin-bottom:5px;"><span>Max 12 pax</span> <b>₹22,000</b></div>
-              <div style="display:flex; justify-content:space-between;"><span>Max 6 pax</span> <b>₹25,000</b></div>
+
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <button onclick="bookOffBeat()" style="width:100%; margin-top:20px; background:var(--whatsapp); color:#fff; padding:12px; border:none; border-radius:10px; font-weight:700; cursor:pointer;">Book Now</button>
-          </div>
         </div>
+    </nav>
 
-        <div class="package-card reveal">
-          <div style="height:250px; background:url('https://images.unsplash.com/photo-1596708682977-18cc98a9ba53?w=700') center/cover;"></div>
-          <div class="package-card-body">
-            <h3>Classic Kashmir Tour</h3>
-            <p style="color:var(--accent); font-weight:700;">7 Days · 6 Nights</p>
-            <ul style="list-style:none; margin:20px 0;">
-              <li>📍 Gulmarg & Sonamarg</li>
-              <li>📍 Pahalgam (2 Nights)</li>
-              <li>📍 Doodhpathri</li>
-              <li>📍 Srinagar (4 Nights)</li>
-            </ul>
-            <div style="background:var(--snow); padding:15px; border-radius:15px;">
-              <div style="display:flex; justify-content:space-between;"><span>Standard Price</span> <b>₹10,500</b></div>
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">✦ The 2026 Collection Now Live</div>
+                <h1>Your Kashmir <br>Adventure <span>Starts Here</span></h1>
+                <p>Authentic, boutique travel experiences designed by local experts. We don't just show you the valley; we let you live it.</p>
+                
+                <div class="hero-btns">
+                    <a href="#packages" class="btn-xl btn-hero-primary">Explore Packages</a>
+                    <a href="https://wa.me/917006483646" class="btn-xl btn-hero-outline">Chat on WhatsApp</a>
+                </div>
             </div>
-            <button onclick="bookNormal()" style="width:100%; margin-top:20px; background:var(--whatsapp); color:#fff; padding:12px; border:none; border-radius:10px; font-weight:700; cursor:pointer;">Book Now</button>
-          </div>
         </div>
-      </div>
+    </section>
+
+    <div class="marquee-container">
+        <div class="marquee-wrap">
+            <div class="marquee-item"><div class="marquee-dot"></div>Gurez Valley</div>
+            <div class="marquee-item"><div class="marquee-dot"></div>Bangus Valley</div>
+            <div class="marquee-item"><div class="marquee-dot"></div>Lolab Valley</div>
+            <div class="marquee-item"><div class="marquee-dot"></div>Keran</div>
+            <div class="marquee-item"><div class="marquee-dot"></div>Kishanganga River</div>
+            <div class="marquee-item"><div class="marquee-dot"></div>Shina Culture</div>
+            <div class="marquee-item"><div class="marquee-dot"></div>Gurez Valley</div>
+            <div class="marquee-item"><div class="marquee-dot"></div>Bangus Valley</div>
+            <div class="marquee-item"><div class="marquee-dot"></div>Lolab Valley</div>
+            <div class="marquee-item"><div class="marquee-dot"></div>Keran</div>
+            <div class="marquee-item"><div class="marquee-dot"></div>Kishanganga River</div>
+            <div class="marquee-item"><div class="marquee-dot"></div>Shina Culture</div>
+        </div>
     </div>
-  </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <img src="image.png" alt="Shayaan Valley Tours" class="footer-logo-img" />
-          <p style="opacity:0.7;">Redefining Kashmir travel with authentic, local experiences.</p>
+    <section class="section-padding" id="packages">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="tag-line">Curated Itineraries</span>
+                <h2>Choose Your Vibe</h2>
+            </div>
+
+            <div class="packages-grid">
+                <article class="package-card reveal">
+                    <div class="p-card-img">
+                        <img src="https://images.unsplash.com/photo-1626621331169-5f34be280ed4?w=900" alt="Gurez Valley" />
+                        <span class="p-type type-offbeat">Off-Beat Expedition</span>
+                    </div>
+                    <div class="p-card-content">
+                        <h3>Off-Beat Kashmir</h3>
+                        <div class="p-duration">⏱ 8 Days · 7 Nights</div>
+                        
+                        <ul class="itinerary-list">
+                            <li><span>📍 Gurez Valley</span> <span>2 Nights</span></li>
+                            <li><span>📍 Bangus Valley</span> <span>1 Night</span></li>
+                            <li><span>📍 Lolab Valley</span> <span>2 Nights</span></li>
+                            <li><span>📍 Keran Frontier</span> <span>1 Night</span></li>
+                        </ul>
+
+                        <div class="pricing-box">
+                            <div class="pricing-item"><span>Max 12 Pax Group</span> <b>₹22,000</b></div>
+                            <div class="pricing-item"><span>Max 6 Pax Private</span> <b>₹25,000</b></div>
+                            <div class="pricing-item"><span>Max 5 Pax Private</span> <b>₹28,000</b></div>
+                            <button class="btn-wa-booking" onclick="bookOffBeat()">Confirm via WhatsApp</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="package-card reveal">
+                    <div class="p-card-img">
+                        <img src="https://images.unsplash.com/photo-1596708682977-18cc98a9ba53?w=900" alt="Gulmarg" />
+                        <span class="p-type type-classic">Heritage Trail</span>
+                    </div>
+                    <div class="p-card-content">
+                        <h3>Classic Kashmir</h3>
+                        <div class="p-duration">⏱ 7 Days · 6 Nights</div>
+                        
+                        <ul class="itinerary-list">
+                            <li><span>📍 Gulmarg & Sonamarg</span> <span>Day Trips</span></li>
+                            <li><span>📍 Pahalgam Highlands</span> <span>2 Nights</span></li>
+                            <li><span>📍 Doodhpathri Meadows</span> <span>Day Trip</span></li>
+                            <li><span>📍 Srinagar Heritage</span> <span>4 Nights</span></li>
+                        </ul>
+
+                        <div class="pricing-box">
+                            <div class="pricing-item"><span>Max 2 Pax Private</span> <b>₹14,500</b></div>
+                            <div class="pricing-item"><span>Max 4 Pax Private</span> <b>₹12,500</b></div>
+                            <div class="pricing-item"><span>Max 6 Pax Private</span> <b>₹10,500</b></div>
+                            <button class="btn-wa-booking" onclick="bookNormal()">Confirm via WhatsApp</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
-        <div>
-          <h4>Quick Links</h4>
-          <ul style="list-style:none; margin-top:15px; opacity:0.7;">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#packages">Packages</a></li>
-            <li><a href="#seasonal">Seasonal</a></li>
-          </ul>
+    </section>
+
+    <section class="seasonal-section section-padding" id="seasonal">
+        <div class="container">
+            <div class="seasonal-card reveal">
+                <span class="seasonal-icon">🌷</span>
+                <span class="tag-line" style="color:var(--accent)">Seasonal Highlight</span>
+                <h2>The Tulip Garden Festival</h2>
+                <p>Experience Asia's largest Tulip garden in Srinagar. Millions of colors blooming against the backdrop of the Zabarwan range.</p>
+                
+                <div class="seasonal-status">
+                    <div class="pulse-dot"></div> Status: Opening Soon
+                </div>
+                
+                <p style="font-weight: 800; font-size: 1.2rem; margin-bottom: 40px;">📅 Booking Expected: March – April 2027</p>
+                
+                <a href="https://wa.me/917006483646" class="btn-xl btn-hero-primary" style="margin: 0 auto; width: fit-content;">Notify Me on WhatsApp</a>
+            </div>
         </div>
-        <div>
-          <h4>Contact Us</h4>
-          <p style="margin-top:15px; opacity:0.7;">+91 70064 83646</p>
-          <p style="opacity:0.7;">Srinagar, Jammu & Kashmir</p>
+    </section>
+
+    <section class="section-padding" id="why">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="tag-line">The Shayaan Standard</span>
+                <h2>Why Travel With Us?</h2>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testi-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <h4>Hyper-Local Team</h4>
+                    <p>Born and raised in the valley. We know the spots that don't exist on Google Maps.</p>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <h4>Fixed & Honest Pricing</h4>
+                    <p>No hidden charges, no middle-man commissions. What you see is what you pay.</p>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <h4>Custom Experiences</h4>
+                    <p>Whether it's a quiet cup of tea in Gurez or a hike in Pahalgam, we tailor it for you.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div style="text-align:center; margin-top:50px; opacity:0.4; font-size:0.8rem;">
-        © 2026 Shayaan Valley Tours. All rights reserved.
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <button class="back-to-top" id="backToTop">↑</button>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="image.png" alt="Shayaan Valley Tours" class="footer-logo-img" />
+                    <p>Redefining travel in the valley. We are a fresh team of locals dedicated to bringing you the soul of Kashmir.</p>
+                </div>
+                
+                <div class="footer-nav">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#packages">Tour Packages</a></li>
+                        <li><a href="#seasonal">Spring Blooms</a></li>
+                        <li><a href="#why">Why Us</a></li>
+                    </ul>
+                </div>
 
-  <script>
-    const whatsappNumber = '917006483646';
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Safety Guidelines</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
 
-    function bookOffBeat() {
-      const msg = encodeURIComponent("Hi Shayaan Valley Tours! 👋 I'm interested in the Off-Beat Kashmir Tour.");
-      window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, '_blank');
-    }
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>📞 +91 70064 83646</p>
+                    <p>📧 info@shayaanvalleytours.com</p>
+                    <p>📍 Srinagar, Jammu & Kashmir</p>
+                    
+                    <a href="https://wa.me/917006483646" class="btn-wa-booking" style="margin-top: 20px;">Book on WhatsApp</a>
+                </div>
+            </div>
 
-    function bookNormal() {
-      const msg = encodeURIComponent("Hi Shayaan Valley Tours! 👋 I'm interested in the Classic Kashmir Tour.");
-      window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, '_blank');
-    }
+            <div class="footer-bottom">
+                <p>© 2026 Shayaan Valley Tours. All Rights Reserved. Designed for the Modern Explorer.</p>
+            </div>
+        </div>
+    </footer>
 
-    window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-      document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 500);
-    });
+    <button class="back-to-top" id="backToTop">↑</button>
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-    });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    
-    document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-  </script>
+    <script>
+        const whatsappNumber = '917006483646';
+
+        /**
+         * WhatsApp Booking Functions
+         */
+        function bookOffBeat() {
+            const message = `Hi Shayaan Valley Tours! 👋\n\nI'm interested in booking the *Off-Beat Kashmir Tour* (8 Days/7 Nights)\n\nPackage Details:\n- Gurez Valley (2 nights)\n- Bangus Valley (1 night)\n- Lolab Valley (2 nights)\n- Keran (1 night)\n\nPlease share more details and availability.`;
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        function bookNormal() {
+            const message = `Hi Shayaan Valley Tours! 👋\n\nI'm interested in booking the *Classic Kashmir Tour* (7 Days/6 Nights)\n\nPackage Details:\n- Gulmarg\n- Pahalgam (2 nights)\n- Sonamarg\n- Doodhpathri\n- Srinagar (4 nights)\n\nPlease share more details and availability.`;
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        /**
+         * Scroll Handling
+         */
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            // Navbar state
+            if (window.scrollY > 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Back to top visibility
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        /**
+         * Reveal Animations
+         */
+        const revealItems = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealItems.forEach(item => revealObserver.observe(item));
+
+        /**
+         * Mobile Menu Toggle
+         */
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.background = 'var(--primary)';
+                navLinks.style.padding = '20px';
+            }
+        });
+    </script>
 </body>
 </html>
