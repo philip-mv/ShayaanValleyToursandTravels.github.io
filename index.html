@@ -36,7 +36,6 @@
             --instagram: #E4405F;
             --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
             --google: #DB4437;
-            --tulip-red: #8B1E3F;
             
             --glass-white: rgba(255, 255, 255, 0.85);
             --glass-dark: rgba(4, 41, 29, 0.95);
@@ -378,208 +377,65 @@
         .pricing-box { margin-top: 30px; background: var(--snow); padding: 30px; border-radius: var(--radius-md); }
         .btn-wa-booking { width: 100%; margin-top: 25px; background: var(--whatsapp); color: var(--white); border: none; padding: 18px; border-radius: 15px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 12px; }
 
-        /* TULIP GARDEN SPECIAL - CINEMATIC AD SECTION */
-        .tulip-special-section {
-            position: relative;
-            margin: 80px 24px;
-            border-radius: 40px;
-            overflow: hidden;
-            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
-        }
-
-        .tulip-ad-container {
-            position: relative;
-            width: 100%;
-            height: 700px;
-            overflow: hidden;
-        }
-
-        .tulip-ad-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            animation: tulipZoom 20s ease-in-out infinite;
-        }
-
-        @keyframes tulipZoom {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-
-        .tulip-ad-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(139, 30, 63, 0.85) 0%, rgba(4, 41, 29, 0.7) 50%, rgba(212, 168, 75, 0.6) 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 60px;
-            text-align: center;
+        /* COMING SOON SECTION */
+        .coming-soon-section {
+            background: var(--primary);
             color: var(--white);
+            border-radius: 80px;
+            margin: 0 24px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .tulip-badge {
-            background: rgba(255, 255, 255, 0.95);
-            color: var(--tulip-red);
-            padding: 12px 35px;
+        .coming-soon-content {
+            padding: 120px 60px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 5;
+        }
+
+        .coming-soon-badge {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px 24px;
             border-radius: 50px;
             font-weight: 800;
-            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
-            animation: fadeInDown 1s ease 0.2s both;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .tulip-title {
-            font-size: clamp(3rem, 6vw, 5rem);
-            font-weight: 900;
-            margin-bottom: 15px;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            animation: fadeInUp 1s ease 0.4s both;
-            letter-spacing: 2px;
-        }
-
-        .tulip-subtitle {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 50px;
-            opacity: 0.95;
-            animation: fadeInUp 1s ease 0.6s both;
-        }
-
-        .tulip-content-wrapper {
-            display: flex;
-            gap: 60px;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease 0.8s both;
-        }
-
-        .tulip-price-badge {
-            background: var(--white);
-            color: var(--tulip-red);
-            padding: 30px 40px;
-            border-radius: 50%;
-            text-align: center;
-            min-width: 180px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-            transform: rotate(-5deg);
-            transition: var(--transition-smooth);
-        }
-
-        .tulip-price-badge:hover {
-            transform: rotate(0deg) scale(1.05);
-        }
-
-        .tulip-price-label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-
-        .tulip-price {
-            font-size: 2.5rem;
-            font-weight: 900;
-            line-height: 1;
-        }
-
-        .tulip-features {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            padding: 35px 45px;
-            border-radius: 25px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .tulip-duration {
-            font-size: 1.3rem;
-            font-weight: 700;
+            font-size: 0.8rem;
             margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .tulip-features-list {
-            list-style: none;
-            text-align: left;
-        }
-
-        .tulip-features-list li {
-            padding: 12px 0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .tulip-features-list li::before {
-            content: '✓';
-            width: 28px;
-            height: 28px;
-            background: var(--whatsapp);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            flex-shrink: 0;
-        }
-
-        .tulip-cta-button {
-            background: var(--white);
-            color: var(--tulip-red);
-            padding: 22px 60px;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-            transition: var(--transition-smooth);
-            animation: pulse 2s ease infinite, fadeInUp 1s ease 1s both;
             display: inline-block;
-            margin-top: 40px;
         }
 
-        .tulip-cta-button:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        .coming-soon-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 30px;
         }
 
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
-            50% { box-shadow: 0 20px 60px rgba(255, 255, 255, 0.5); }
+        .coming-soon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .coming-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: var(--radius-md);
+            transition: var(--transition-smooth);
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .coming-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-10px);
         }
+
+        .coming-card i { font-size: 2.5rem; display: block; margin-bottom: 20px; }
+        .coming-card h4 { margin-bottom: 10px; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+        .coming-card p { opacity: 0.6; font-size: 0.9rem; }
 
         /* GALLERY PREVIEW */
         .gallery-preview {
@@ -735,34 +591,12 @@
         @media (max-width: 992px) {
             .nav-links { display: none; }
             .mobile-toggle { display: flex; }
-            .packages-grid, .gallery-preview { grid-template-columns: 1fr; }
+            .packages-grid, .coming-soon-grid, .gallery-preview { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
             .gallery-item { height: 300px; }
             .p-card-content { padding: 30px; }
+            .coming-soon-content { padding: 80px 30px; }
             .social-buttons { justify-content: center; }
-            
-            .tulip-ad-container {
-                height: auto;
-                min-height: 800px;
-            }
-            
-            .tulip-ad-overlay {
-                padding: 40px 30px;
-            }
-            
-            .tulip-content-wrapper {
-                flex-direction: column;
-                gap: 40px;
-            }
-            
-            .tulip-price-badge {
-                min-width: 150px;
-                padding: 25px 30px;
-            }
-            
-            .tulip-price {
-                font-size: 2rem;
-            }
         }
 
         @media (max-width: 640px) {
@@ -770,23 +604,6 @@
             .mobile-menu { width: 90%; }
             .marquee-item { font-size: 1.8rem; }
             .social-btn { width: 100%; justify-content: center; }
-            
-            .tulip-title {
-                font-size: 2.2rem;
-            }
-            
-            .tulip-subtitle {
-                font-size: 1.3rem;
-            }
-            
-            .tulip-features {
-                padding: 25px 30px;
-            }
-            
-            .tulip-cta-button {
-                padding: 18px 40px;
-                font-size: 1.1rem;
-            }
         }
     </style>
 </head>
@@ -801,8 +618,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#packages">Destinations</a></li>
-                <li><a href="#tulip-special">Tulip Special</a></li>
-                <li><a href="#why">Why Us</a></li>
+                <li><a href="#coming-soon">Coming Soon</a></li>
                 <li><a href="https://wa.me/919186220191" class="nav-cta">Book Adventure</a></li>
             </ul>
 
@@ -822,8 +638,7 @@
         <ul class="mobile-menu-links">
             <li><a href="#home" class="mobile-link">Home</a></li>
             <li><a href="#packages" class="mobile-link">Destinations</a></li>
-            <li><a href="#tulip-special" class="mobile-link">Tulip Special</a></li>
-            <li><a href="#why" class="mobile-link">Why Us</a></li>
+            <li><a href="#coming-soon" class="mobile-link">Coming Soon</a></li>
             <li><a href="https://wa.me/919186220191" class="mobile-menu-cta">Book Adventure</a></li>
         </ul>
     </div>
@@ -916,43 +731,33 @@
         </div>
     </section>
 
-    <!-- TULIP GARDEN SPECIAL - CINEMATIC AD SECTION -->
-    <section class="section-padding" id="tulip-special" style="padding-top: 0; padding-bottom: 80px;">
-        <div class="container">
-            <div class="section-title reveal">
-                <span class="tag-line">Limited Time Offer</span>
-                <h2>Spring Special Package</h2>
-            </div>
-        </div>
-        
-        <div class="tulip-special-section reveal">
-            <div class="tulip-ad-container">
-                <img src="tulip-ad.jpg" alt="Tulip Garden Special" class="tulip-ad-image" />
-                <div class="tulip-ad-overlay">
-                    <div class="tulip-badge">🌷 Spring Festival 2027</div>
-                    <h2 class="tulip-title">TULIP GARDEN SPECIAL</h2>
-                    <p class="tulip-subtitle">Kashmir Spring Festival 2027</p>
-                    
-                    <div class="tulip-content-wrapper">
-                        <div class="tulip-price-badge">
-                            <div class="tulip-price-label">Starting</div>
-                            <div class="tulip-price">₹8,999</div>
-                        </div>
-                        
-                        <div class="tulip-features">
-                            <div class="tulip-duration">3 Days / 2 Nights Package</div>
-                            <ul class="tulip-features-list">
-                                <li>Hotel Stay</li>
-                                <li>Breakfast</li>
-                                <li>Shikhara Ride</li>
-                                <li>Garden Entry</li>
-                            </ul>
-                        </div>
+    <section id="coming-soon" class="section-padding">
+        <div class="coming-soon-section reveal">
+            <div class="coming-soon-content">
+                <span class="coming-soon-badge">The Horizon 2026/27</span>
+                <h2 class="coming-soon-title">More Adventures <br><span>Coming Soon</span></h2>
+                <p>We are currently scouting new trails and curating exclusive winter and trekking experiences. Stay tuned for our next big reveal.</p>
+                
+                <div class="coming-soon-grid">
+                    <div class="coming-card">
+                        <i>❄️</i>
+                        <h4>Winter Magic</h4>
+                        <p>Frozen waterfalls and snow-clad Gurez explorations.</p>
                     </div>
-                    
-                    <a href="https://wa.me/919186220191?text=Hi!%20I'm%20interested%20in%20the%20Tulip%20Garden%20Special%20Package.%20Please%20share%20more%20details." class="tulip-cta-button" target="_blank">
-                        Book Now
-                    </a>
+                    <div class="coming-card">
+                        <i>🥾</i>
+                        <h4>Trek Series</h4>
+                        <p>High-altitude lake treks led by professional local guides.</p>
+                    </div>
+                    <div class="coming-card">
+                        <i>🛶</i>
+                        <h4>Boutique Stays</h4>
+                        <p>Partnerships with unique off-beat eco-cottages.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top:60px;">
+                    <a href="https://wa.me/919186220191" style="padding:15px 40px; background:var(--white); color:var(--primary); border-radius:50px; font-weight:800; display:inline-block;">Notify Me via WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -996,7 +801,7 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#packages">Tour Packages</a></li>
-                        <li><a href="#tulip-special">Tulip Special</a></li>
+                        <li><a href="#coming-soon">Coming Soon</a></li>
                         <li><a href="#why">Why Us</a></li>
                     </ul>
                 </div>
